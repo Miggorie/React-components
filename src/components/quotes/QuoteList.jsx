@@ -1,4 +1,5 @@
 import React from 'react'
+import Quote from './Quote';
 
 function QuoteList({ quoteText }) {
 
@@ -9,8 +10,8 @@ function QuoteList({ quoteText }) {
   return (
     <div>
       <ul>
-      {quoteText.map((quote, id) =>(
-        <li key={id}>{quote}</li>
+      {quoteText.map((quotes, id) =>(
+        <Quote key={id} quote={quotes}/>
       ))}
       </ul>
     </div>
