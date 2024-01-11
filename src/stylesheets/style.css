@@ -2,25 +2,40 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+body {
+  background-color: #FEF0CA;
+}
+
 .quote-form {
   font-size: 1.2rem;
+  width: 100%;
 }
 
 .quote-form input, .quote-form button {
   font-size: inherit;
 }
 
+.quote-container {
+  display: flex;
+}
+
 .quote-input {
-  width: 80%;
+  width: 100%;
   padding: 1rem;
   border-radius: 0.5rem 0rem 0rem 0.5rem;
   border: solid 1px rgb(210, 210, 210);
 }
+.quote-input:focus, .quote-input:active, .quote-input:focus-visible {
+  border: solid 1px #7E3B10;
+}
 
 .quote-submit {
   padding: 1rem;
-  background-color: black;
+  background-color: #7E3B10;
   color: white;
   border-radius: 0rem 0.5rem 0.5rem 0rem;
+  border: solid 1px #7E3B10;
+}
+.quote-submit:focus, .quote-submit:active, .quote-submit:focus-visible {
   border: solid 1px black;
 }/*# sourceMappingURL=style.css.map */
