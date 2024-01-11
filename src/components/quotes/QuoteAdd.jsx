@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
 
 function QuoteAdd({ onTextSubmit }) {
-    const [userInput, setUserInput] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onTextSubmit(userInput);
-        setUserInput(""); 
+        let inputValue = e.target.elements.inputQuote.value;
+        
+        if(inputValue === ""){
+          return;
+        }
+
+        onTextSubmit(inputValue);
+        e.target.elements.inputQuote.value = "";
     };
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <form className="quote-form" onSubmit={handleSubmit}>
                 <input 
-                    value={userInput} 
-                    onChange={(e) => setUserInput(e.target.value)}
+                    className="quote-input"
+                    name="inputQuote"
+                    id={1}
                     placeholder="Enter quote from Puh"
                 />
-                <button disabled={userInput.length === 0}>Submit</button>
+                <button className="quote-submit">Submit</button>
             </form>
         </div>
     );

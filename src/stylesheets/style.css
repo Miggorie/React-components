@@ -1,3 +1,26 @@
 body {
   font-family: "Raleway", sans-serif;
+}
+
+.quote-form {
+  font-size: 1.2rem;
+}
+
+.quote-form input, .quote-form button {
+  font-size: inherit;
+}
+
+.quote-input {
+  width: 80%;
+  padding: 1rem;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  border: solid 1px rgb(210, 210, 210);
+}
+
+.quote-submit {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+  border: solid 1px black;
 }/*# sourceMappingURL=style.css.map */

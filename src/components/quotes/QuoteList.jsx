@@ -1,9 +1,18 @@
 import React from 'react'
 
 function QuoteList({ quoteText }) {
+
+  if (!Array.isArray(quoteText)) {
+    return <div>Invalid data</div>;
+  }
+
   return (
     <div>
-      <p>{quoteText}</p>
+      <ul>
+      {quoteText.map((quote, id) =>(
+        <li key={id}>{quote}</li>
+      ))}
+      </ul>
     </div>
   )
 }
