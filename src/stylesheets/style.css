@@ -6,6 +6,10 @@ body {
   background-color: #FEF0CA;
 }
 
+li {
+  list-style-type: none;
+}
+
 .quote-form {
   font-size: 1.2rem;
   width: 100%;
@@ -38,4 +42,16 @@ body {
 }
 .quote-submit:focus, .quote-submit:active, .quote-submit:focus-visible {
   border: solid 1px black;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+li {
+  background-color: white;
+  width: 20%;
+  min-height: 300px;
+  padding: 2rem;
 }/*# sourceMappingURL=style.css.map */

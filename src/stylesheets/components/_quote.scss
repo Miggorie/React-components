@@ -1,0 +1,11 @@
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+li{
+    background-color: white;
+    width: 20%;
+    min-height: 300px;
+    padding: 2rem;
+}
