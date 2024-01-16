@@ -17,7 +17,7 @@ function QuoteAdd({ onTextSubmit }) {
     return (
         <div>
             <form className="quote-form" onSubmit={handleSubmit}>
-              <div class="quote-container">
+              <div className="quote-container">
                 <input 
                     className="quote-input"
                     name="inputQuote"
