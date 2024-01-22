@@ -1,23 +1,12 @@
 import React from 'react'
 import { useState } from 'react';
-import QuoteAdd from './QuoteAdd'
-import QuoteList from './QuoteList'
 import { useAjaxCall } from '../../hooks/useAjaxCall';
 
 const QuoteManager = () => {
-  const [quoteText, setQuoteText] = useState([])
-
-  const handleTextSubmit = (newQuote) =>{
-    setQuoteText([...quoteText, newQuote])
-}
-    const url = 'https://juanroldan1989-moviequotes-v1.p.rapidapi.com/api/v1/quotes?actor=Al%20Pacino';
+    const url = `https://api.api-ninjas.com/v1/quotes?categry=movies`;
     const options = {
         method: 'GET',
-        headers: {
-            Authorization: 'Token token=yd8WzkWNEEzGtqMSgiZBrwtt',
-            'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
-            'X-RapidAPI-Host': 'juanroldan1989-moviequotes-v1.p.rapidapi.com'
-        }
+        headers: { 'X-Api-Key': '4bEmbntI1QtZsM/zx2'}
     };
 
     const { data, isLoading, error } = useAjaxCall(url, options);
@@ -34,8 +23,6 @@ const QuoteManager = () => {
                     <li key={quote.id}>{quote.quote}</li>
                 ))}
             </ul>
-            <QuoteAdd onTextSubmit={handleTextSubmit}/>
-        <QuoteList quoteText={quoteText}/>
         </div>
     );
 };
